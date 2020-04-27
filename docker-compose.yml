@@ -1,0 +1,7 @@
+version: '3'
+services:
+  draw:
+    build: ./python
+    tty: true
+    volumes:
+       - .:/work/
