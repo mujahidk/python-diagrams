@@ -9,10 +9,13 @@ Diagrams as code using Python and Diagrams
 ## Docker image
 
 - Update apt
-- Install graphviz
-- Install vim
+- Install graphviz - Diagrams requirement
+- Install vim - To edit scripts and run from within the container.
 - Install diagrams
 
+## Create Python container using Compose
+
+> NOTE: You don't need to use Docker compose to create or run containers.
 
 ```bash
 docker-compose up -d --build
@@ -21,8 +24,10 @@ docker-compose up -d --build
 ## Connecto to container
 
 ```bash
-docker -exec -it bash container_name
+docker -exec -it <container-name-or-id> bash
 ```
+
+## Run python script
 
 > Sample script is available in [scripts](scripts/) directory.
 
@@ -32,8 +37,14 @@ python hello-world.py
 ls
 ```
 
+## View generated diagram in the scripts directory
+
+![Hello, World](scripts/hello_world.png)
+
 ## Read more
 
-----------------------------------------------
-LICENSE: MIT
+- [Diagrams](https://diagrams.mingrammer.com/)
 
+----------------------------------------------
+[LICENSE](LICENSE)
+ 
