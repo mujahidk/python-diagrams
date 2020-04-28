@@ -44,7 +44,8 @@ ls
 ## Read more
 
 - [Diagrams](https://diagrams.mingrammer.com/)
+- [Diagrams Python - GitHub](https://github.com/mingrammer/diagrams)
 
-----------------------------------------------
-[LICENSE](LICENSE)
+## License
+[MIT](LICENSE)
  
