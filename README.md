@@ -1,6 +1,8 @@
 # python-diagrams
 Diagrams as code using Python and Diagrams
 
+![(Docker Build)](https://github.com/mujahidk/python-diagrams/workflows/(Unnamed%20workflow)/badge.svg)
+
 ## Pre-requisites
 
 - Docker
