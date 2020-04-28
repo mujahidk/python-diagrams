@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Build the Docker image
-      run: docker build . --file python/Dockerfile --tag python-diagrams:develop
+      run: docker build . --file Dockerfile --tag python-diagrams:develop
 
     - name: Publish to Docker Hub Registry
       uses: elgohr/Publish-Docker-Github-Action@master
