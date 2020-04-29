@@ -1,7 +1,7 @@
 version: '3'
 services:
   draw:
-    build: .
+    image: mujahidkhaleel/python-diagrams:1.0.0
     tty: true
     volumes:
        - .:/work/
