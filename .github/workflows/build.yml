@@ -10,6 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag python-diagrams:develop
 
@@ -19,4 +24,4 @@ jobs:
         name: mujahidkhaleel/python-diagrams
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-
+        tags: "${{ steps.extract_branch.outputs.branch }}"
