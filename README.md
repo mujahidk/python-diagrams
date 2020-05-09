@@ -46,7 +46,7 @@ python hello-world.py
 
 ### View generated diagram in the scripts directory
 
-![Hello, World](scripts/hello_world.png)
+![Hello, World](https://raw.githubusercontent.com/mujahidk/python-diagrams/master/scripts/hello_world.png)
 
 ## Read more
 
@@ -55,5 +55,5 @@ python hello-world.py
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/mujahidk/python-diagrams/blob/master/LICENSE)
  
