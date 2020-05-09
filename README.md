@@ -27,21 +27,7 @@ with Diagram("Hello World", show=False):
 ### Run script using container
 
 ```bash
-docker run -it --rm -v "$PWD":/diagrams/scripts/ -w /diagrams/scripts/ mjdk/diagrams python hello-world.py
-```
-
-## Run python from within the container
-
-### Start and access container shell
-
-```bash
-docker run -it --rm -v "$PWD":/diagrams/scripts/ -w /diagrams/scripts/ mjdk/diagrams bash
-```
-
-### Run script in container shell
-
-```bash
-python hello-world.py
+docker run -it --rm -v "$PWD":/diagrams/scripts/ -w /diagrams/scripts/ mjdk/diagrams hello-world.py
 ```
 
 ### View generated diagram in the scripts directory
