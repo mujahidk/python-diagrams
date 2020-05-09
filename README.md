@@ -2,49 +2,49 @@
 
 Diagrams as code using Python and Diagrams
 
-## Pre-requisites
-
-- Docker
-- Docker Compose
-
 ## Docker image
 
 - Update apt
 - Install graphviz - Diagrams requirement
-- Install vim - To edit scripts and run from within the container.
 - Install diagrams
 
 ## Create diagram using container
 
-## Create Diagrams container using Compose
+### Sample script
 
-```bash
-docker run -it --rm -v "$PWD":/diagrams/scripts/ -w /diagram/scripts/ mujahidkhaleel/python-diagrams python hello-world.py
+> **hello-world.py**
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("Hello World", show=False):
+    ELB("Load Balancer") >> EC2("Message Server") >> RDS("Message Store")
 ```
 
-> NOTE: You don't need to use Docker compose to create or run containers.
+### Run script using container
 
 ```bash
-docker-compose up -d --build
+docker run -it --rm -v "$PWD":/diagrams/scripts/ -w /diagram/scripts/ mjdk/diagrams python hello-world.py
 ```
 
-## Connecto to container
+## Run python from within the container
+
+### Start and access container shell
 
 ```bash
-docker -exec -it <container-name-or-id> bash
+docker run -it --rm -v "$PWD":/diagrams/scripts/ -w /diagram/scripts/ mjdk/diagrams bash
 ```
 
-## Run python script
-
-> Sample script is available in [scripts](scripts/) directory.
+### Run script in container shell
 
 ```bash
-cd /work/scripts
 python hello-world.py
-ls
 ```
 
-## View generated diagram in the scripts directory
+### View generated diagram in the scripts directory
 
 ![Hello, World](scripts/hello_world.png)
 
@@ -54,5 +54,6 @@ ls
 - [Diagrams Python - GitHub](https://github.com/mingrammer/diagrams)
 
 ## License
+
 [MIT](LICENSE)
  
