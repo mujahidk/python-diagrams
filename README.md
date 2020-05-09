@@ -1,4 +1,5 @@
 # python-diagrams
+
 Diagrams as code using Python and Diagrams
 
 ## Pre-requisites
@@ -13,7 +14,13 @@ Diagrams as code using Python and Diagrams
 - Install vim - To edit scripts and run from within the container.
 - Install diagrams
 
-## Create Python container using Compose
+## Create diagram using container
+
+## Create Diagrams container using Compose
+
+```bash
+docker run -it --rm -v "$PWD":/diagrams/scripts/ -w /diagram/scripts/ mujahidkhaleel/python-diagrams python hello-world.py
+```
 
 > NOTE: You don't need to use Docker compose to create or run containers.
 
