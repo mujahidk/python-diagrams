@@ -21,7 +21,7 @@ jobs:
     - name: Publish to Docker Hub Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: mujahidkhaleel/python-diagrams
+        name: mjdk/python-diagrams
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         tags: "${{ steps.extract_branch.outputs.branch }}, latest"
